@@ -9,5 +9,12 @@ package oocminihw2;
  * @author Ari
  */
 public class Car extends Vehicle{
+    private int numWheels = 4;
+    private int numPassengers = 5;
     
+    public Car(float speed, float direction, int numWheels, int numPassengers, String make, String type) {
+        super(speed, direction, make, type, numPassengers);
+        this.numWheels = numWheels;
+        this.numPassengers = numPassengers;
+    }
 }
