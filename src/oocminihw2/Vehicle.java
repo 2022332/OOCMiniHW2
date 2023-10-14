@@ -13,9 +13,9 @@ public abstract class Vehicle {
     private float direction = 0;
     private String make;
     private String type;
-    //protected int numWheels = 0;
-    //protected int numWings = 0;
-    //protected int numSails = 0;
+    protected int numWheels = 0;
+    protected int numWings = 0;
+    protected int numSails = 0;
     private int numPassengers;
     
     public Vehicle(float speed, float direction, String make, String type, int numPassengers) {
