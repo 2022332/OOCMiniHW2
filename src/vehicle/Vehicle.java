@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package oocminihw2;
+package vehicle;
 
 /**
  *
- * @author sweis
+ * @author sweiss and Ari
  */
 public abstract class Vehicle {
     private float speed;

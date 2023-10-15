@@ -2,24 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package oocminihw2;
+package vehicle;
 
 /**
  *
  * @author Ari
  */
 public class Airplane extends Vehicle implements Flyable{
-    private int numWings = 2;
-    private int numPassengers = 15;
+    private int numWings;
     
     public Airplane(float speed, float direction, int numWings, int numPassengers, String make, String type) {
         super(speed, direction, make, type, numPassengers);
         this.numWings = numWings;
-        this.numPassengers = numPassengers;
     }
     
     @Override
     public void changeAltitude(float change) {
+        System.out.println("Changing altitude.");
     }
     
     @Override
@@ -29,14 +28,17 @@ public class Airplane extends Vehicle implements Flyable{
     
     @Override
     public void accelerate(float speed) {
+        System.out.println("Accelerating the airplane.");
     }
     
     @Override
     public void brake() {
+        System.out.println("The airplane is preparing for landing.");
     }
     
     @Override
     public void turn(float angle) {
+        System.out.println("Turning to the right .");
     }
     
     @Override
