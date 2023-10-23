@@ -8,11 +8,26 @@ package vehicle;
  *
  * @author Ari
  */
-public class Car extends Vehicle{
+public class Car extends Vehicle implements Drivable{
     private int numWheels;
     
-    public Car(float speed, float direction, int numWheels, int numPassengers, String make, String type) {
-        super(speed, direction, make, type, numPassengers);
-        this.numWheels = numWheels;
+    public Car(double speed, int numWheels, int numPassengers, String make, String type) {
+        super(speed, make, type, numPassengers);
+        this.numWheels = 4;
+    }
+    
+    @Override
+    public void turn(double angle) {
+//        float currentDirection = this.getDirection();
+        this.setDirection(this.getDirection() + angle);
+    }
+    @Override
+    public void brake() {
+        this.setSpeed(0);
+    }
+    
+    @Override
+    public void accelerate(double speedChange) {
+        this.setSpeed(this.getSpeed() + speedChange);
     }
 }

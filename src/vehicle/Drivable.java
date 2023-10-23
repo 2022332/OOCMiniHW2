@@ -9,11 +9,11 @@ package vehicle;
  * @author sweis
  */
 public interface Drivable {
-    public void accelerate(float speed);
+    public void accelerate(double speed);
     public void brake();
-    public void turn(float angle);
-    public float getDirection(); 
-    public float getSpeed();   
+    public void turn(double angle);
+    public double getDirection(); 
+    public double getSpeed();   
     public String getMake();    
     public String getType();
 }

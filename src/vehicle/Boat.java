@@ -9,21 +9,22 @@ package vehicle;
  * @author Ari
  */
 public class Boat extends Vehicle implements Sailable{
-    private int numSails;
-    
-    public Boat(float speed, float direction, int numSails, int numPassengers, String make, String type) {
-        super(speed, direction, make, type, numPassengers);
+    private boolean sailHoisted;
+
+    public Boat(int numSails, boolean sailHoisted, double speed, String make, String type, int numPassengers) {
+        super(speed, make, type, numPassengers);
+        this.sailHoisted = sailHoisted;
         this.numSails = numSails;
     }
     
     @Override
     public void hoistSail() {
-        System.out.println("The sail is been hoist to get more speed from the wind.");
+        sailHoisted = true;
     }
     
     @Override
     public void lowerSail() {
-        System.out.println("The sail is been lowered to stop the boat.");
+        sailHoisted = false;
     }
     
     @Override
@@ -33,6 +34,6 @@ public class Boat extends Vehicle implements Sailable{
     
     @Override
     public boolean isSailHoisted() {
-        return true;
+        return sailHoisted;
     }
 }

@@ -8,9 +8,11 @@ package vehicle;
  *
  * @author sweiss and Ari
  */
+//Remeber FLOAT is a number smaller than DOUBLE
+
 public abstract class Vehicle {
-    private float speed;
-    private float direction = 0;
+    private double speed;
+    private double direction = 0;
     private String make;
     private String type;
     protected int numWheels = 0;
@@ -18,31 +20,30 @@ public abstract class Vehicle {
     protected int numSails = 0;
     private int numPassengers;
     
-    public Vehicle(float speed, float direction, String make, String type, int numPassengers) {
+    public Vehicle(double speed, String make, String type, int numPassengers) {
         this.speed = speed;
-        this.direction = direction;
         this.make = make;
         this.type = type;
         this.numPassengers = numPassengers;
     }
     
-    public float speed() {
+    public double getSpeed() {
         return speed;
     }
 
-    public void setSpeed(float speed) {
+    public void setSpeed(double speed) {
         this.speed = speed;
     }
     
-    public float direction() {
+    public double getDirection() {
         return direction;
     }
     
-    public void setDirection(float direction) {
+    public void setDirection(double direction) {
         this.direction = direction;
     }
     
-    public String make() {
+    public String getMake() {
         return make;
     }
     
@@ -50,7 +51,7 @@ public abstract class Vehicle {
         this.make = make;
     }
     
-    public String type() {
+    public String getType() {
         return type;
     }
     
@@ -58,7 +59,7 @@ public abstract class Vehicle {
         this.type = type;
     }
     
-    public int numPassengers() {
+    public int getNumPassengers() {
         return numPassengers;
     }
     
